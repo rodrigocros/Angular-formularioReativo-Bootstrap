@@ -1,0 +1,50 @@
+<div class="bg-secondary vh-100">
+    <div [formGroup]="registroMaterias" class="container bg-light pt-5 vh-100">
+        <h3 class="ms-5">Formulário de registro de matérias</h3>
+        <form formGroupName="materiaInfo" action="">
+            <div class="col-10 pt-3">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                      <label for="firstName" class="form-label">Nome</label>
+                      <input formControlName="nome" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                      <label for="horas" class="form-label">Horas aula</label>
+                      <input min="30" max="100" formControlName="horasAula" type="number" class="form-control" id="horas" placeholder="" value="" required="">
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <label for="Escola" class="form-label">Escola</label>
+                        <input formControlName="escola" type="text" class="form-control" id="Escola" placeholder="" value="" required="">
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                      <label for="couProfessorntry" class="form-label">Professor</label>
+                      <select formControlName="professor" class="form-select" id="Professor" required="">
+                        <option value="">Escolha...</option>
+                        <option>Otávio</option>
+                        <option>Vivian</option>
+                        <option>Leandro</option>
+                        <option>Cláudia</option>
+                      </select>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="my-3 col-10">
+                        <label for="opcional">Materia Opcional</label>
+                        <div class="form-check">
+                          <input formControlName="opcional" name="opcional" value="sim" id="opcional" type="radio" class="form-check-input" required="">
+                          <label class="form-check-label" for="opcional">Sim</label>
+                        </div>
+                        <div class="form-check">
+                          <input formControlName="opcional" name="opcional" value="nao"  id="opcional" type="radio" class="form-check-input" required="">
+                          <label class="form-check-label" for="opcional">Não</label>
+                        </div>
+                    </div>
+                    <button (click)="Showdata()" class="btn btn-danger btn-lg mt-5 ms-5" type="button">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

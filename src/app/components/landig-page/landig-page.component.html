@@ -1,0 +1,145 @@
+<div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg> -->
+        <span class="fs-4">Rodrigo Rosa</span>
+      </a>
+    </header>
+  
+   <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Hire Me</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div [formGroup]="formHireME" class="modal-body">
+        <form formGroupName="bossInfo"  action="">
+          <div class="col-12">
+            <label for="firstName" class="form-label">First name</label>
+            <input formControlName="name" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-12 mt-1">
+            <label for="lastName" class="form-label">Last name</label>
+            <input formControlName="lastName" type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+          <div class="col-12 mt-1">
+            <label for="username" class="form-label">Email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text">@</span>
+              <input formControlName="email" type="text" class="form-control" id="username" placeholder="Email" required="">
+              <div class="invalid-feedback">
+                Your username is required.
+              </div>
+            </div>
+            <div class="col-12 mt-1">
+              <label for="textarea" class="form-label">Send me a massage:</label>
+              <textarea formControlName="textArea" type="text" class="form-control" name="textarea" id="textarea" cols="30" rows="5"></textarea>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button (click)="closeModal()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button (click)="showData()" type ="button" class="btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <h1 class="display-5 fw-bold">Full Stack Angular and C# aspnet.CORE</h1>
+      <div class="col-12 d-flex">
+        <div class="col-8 py-5">
+          <p class="fs-5">After a period of 10 years working in the commercial area of banks and advertising agencies, today I am making a dream come true, of becoming a Software Developer. <br> I started studying 2 years ago on my own, but for 10 months I've been taking a very immersive SESI/SENAI course in Angular and C# Languages. I'm currently developing on the front end using Angular and on the back end using c# or .dnet. I'm studying SQL Database and Python at the Federal University of Santa Catarina.</p>
+          <button (click)="openModal()" class="btn btn-danger btn-lg mt-5 ms-5" type="button" >Hire me</button>
+        </div>
+        <div class="col-4 ms-5 mt-5">
+          <img class="w-75" src="../assets/euo.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-light rounded-3">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              <h5>FULL STACK ANGULAR & C# | SESI/SENAI
+              </h5>
+              <p>The DEVinhouse Course promoted by SESI in partnership with SENAI is a career journey of the career with: targeted curriculum, practical market teachers, frequent interaction with houses at a time, simulation of the DEV day-to-day. Training Studient to be Full Stack with Angular in Front-end and C# as Back-end.</p>
+            </li>
+            <li>
+              <h5>MBA PROJECT MANAGEMENT | UEA
+              </h5>
+              <p>MBA in Project Management aims to develop in participants the knowledge, capacity and ability to act as project managers of any nature, size or complexity, leading multidisciplinary teams, managing resources, time, budgets and risks and implementing them successfully.</p>
+            </li>
+            <li>
+              <h5>ENGLISH CLASS | ECM SCHOOL
+              </h5>
+              <p>I lived in Dublin/Ireland for 8 months and studied english there, i Worked as a staff of a Pub, It was a grate time.</p>
+            </li>
+            <li>
+              <h5>MASTER IN BUSINESS ADMINISTRATION | CIESA
+              </h5>
+              <p>Business Administration is an area of science that works from the management of human resources to the finances of a business. The idea is that maximum value can be extracted from all areas so that an organization is managed with quality.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-light rounded-3">
+          <h3>Experience
+          </h3>
+          <ul>
+            <li>
+              <h5>Front-End Web Developer | Golabs
+              </h5>
+              <p>• Cooperate with designers to create clean interfaces and simple, intuitive interactions and experiences. <br>
+                • Develop project concepts and maintain optimal workflow.<br>
+                • Work with senior developer to manage large, complex design projects for corporate clients.<br>
+                • Using languages skills, HTML, CSS, PHP, JavaScript and Angular.<br>
+                • Using Bootstrap as a Framework.<br>
+                • Visual Studio Code.<br>
+                • Figma e PSD.</p>
+            </li>
+            <li>
+              <h5>Account Management | Reweb.
+              </h5>
+              <p>• Sale of Landing pages, Facebook ads, Google Ads, social media. <br>
+                • Implementation of the products.<br>
+                • Management of product quality.<br>
+                • Control of customers' Google and Facebook credits.<br>
+                • CRM usage training.<br>
+                • Training for handling Inbound Leads (sales funnel). - Cold call training.<br>
+                • SPIN Selling usage training.</p>
+            </li>
+            <li>
+              <h5>Commercial Operator | Santander Bank
+              </h5>
+              <p>• Sale of financing and insurance and other bank products. <br>
+                • Direct contact with store managers, sellers and customers. <br>
+                • Negotiation of financing amounts. <br>
+                • Payment of financed amount to the concessionaire. <br>
+                • Collection of overdue installments.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+  
+    <footer class="pt-3 mt-4 text-muted border-top">
+      Rodrigo Rosa © 2022
+    </footer>
+  </div>
