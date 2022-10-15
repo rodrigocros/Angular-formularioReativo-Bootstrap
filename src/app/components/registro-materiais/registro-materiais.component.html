@@ -8,6 +8,9 @@
                     <div class="col-10">
                       <label for="firstName" class="form-label">Nome</label>
                       <input formControlName="nome" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                      <div *ngIf="registroMaterias.controls['materiaInfo.controls.nome.dirty && registroMaterias.controls.materiaInfo.controls.nome.valid']" class="alert alert-danger" role="alert">
+                        O campo deve conter pelo menos 3 letras.
+                      </div>
                     </div>
                     <div class="col-2"></div>
                     <div class="col-10">
@@ -42,7 +45,7 @@
                           <label class="form-check-label" for="opcional">Não</label>
                         </div>
                     </div>
-                    <button (click)="Showdata()" class="btn btn-danger btn-lg mt-5 ms-5" type="button">Enviar</button>
+                    <button [disabled]="registroMaterias.invalid" [ngClass]="{ 'btn-primary' : registroMaterias.valid, 'btn-secondary' : registroMaterias.invalid }" (click)="Showdata()" class="btn btn-secondary btn-lg mt-5 ms-5" type="button">Enviar</button>
                 </div>
             </div>
         </form>

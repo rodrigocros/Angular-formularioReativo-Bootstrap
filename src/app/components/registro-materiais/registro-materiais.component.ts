@@ -8,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegistroMateriaisComponent implements OnInit {
   registroMaterias:FormGroup = new FormGroup({});
-
+  
+  
   constructor(private formBuilder:FormBuilder) {
     this.registroMaterias = formBuilder.group({
       materiaInfo:formBuilder.group({

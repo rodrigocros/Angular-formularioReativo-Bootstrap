@@ -29,6 +29,7 @@ export class LandigPageComponent implements OnInit {
   showData(){
     console.log(this.formHireME)
     this.formModal.hide();
+    this.formHireME.reset();
   }
 
   formHireME: FormGroup = new FormGroup({});
